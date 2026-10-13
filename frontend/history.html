@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#050A14">
+  <meta name="description" content="Riwayat percakapan ChatGVTL.">
+  <title>Riwayat — ChatGVTL</title>
+
+  <link rel="stylesheet" href="css/core/reset.css">
+  <link rel="stylesheet" href="css/core/variables.css">
+  <link rel="stylesheet" href="css/core/typography.css">
+  <link rel="stylesheet" href="css/core/global.css">
+  <link rel="stylesheet" href="css/components/app-shell.css">
+  <link rel="stylesheet" href="css/pages/history.css">
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <aside class="app-sidebar" aria-label="Navigasi ChatGVTL">
+      <a class="sidebar-brand" href="index.html">
+        <img class="sidebar-brand-logo" src="assets/logo/chatgvtl-logo.png" alt="">
+        <span>ChatGVTL</span>
+      </a>
+
+      <label class="sidebar-search">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" placeholder="Cari percakapan" aria-label="Cari percakapan">
+      </label>
+
+      <a class="sidebar-new-chat" href="chat.html">
+        <span aria-hidden="true">＋</span>
+        <span>Chat baru</span>
+      </a>
+
+      <div class="sidebar-scroll">
+        <section class="sidebar-section">
+          <div class="sidebar-section-title">Workspace</div>
+
+          <a class="sidebar-link" href="chat.html">
+            <span class="sidebar-icon">✦</span><span>Chat</span>
+          </a>
+
+          <a class="sidebar-link is-active" href="history.html">
+            <span class="sidebar-icon">◷</span><span>Riwayat</span>
+          </a>
+
+          <a class="sidebar-link" href="image-studio.html">
+            <span class="sidebar-icon">◇</span><span>RenAI Image Generator</span>
+          </a>
+
+          <a class="sidebar-link" href="files.html">
+            <span class="sidebar-icon">□</span><span>File</span>
+          </a>
+
+          <a class="sidebar-link" href="projects.html">
+            <span class="sidebar-icon">▣</span><span>Projects</span>
+          </a>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="sidebar-section-title">Pinned</div>
+          <div class="sidebar-history">
+            <a class="sidebar-history-item" href="chat.html">Membangun Model AI</a>
+            <a class="sidebar-history-item" href="chat.html">PT RENAI GVTL Indonesia</a>
+            <a class="sidebar-history-item" href="chat.html">RENAI Router</a>
+            <a class="sidebar-history-item" href="chat.html">ChatGVTL</a>
+          </div>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="sidebar-section-title">Account</div>
+
+          <a class="sidebar-link" href="profile.html">
+            <span class="sidebar-icon">♙</span><span>Profil</span>
+          </a>
+
+          <a class="sidebar-link" href="settings.html">
+            <span class="sidebar-icon">⚙</span><span>Pengaturan</span>
+          </a>
+
+          <a class="sidebar-link" href="subscription.html">
+            <span class="sidebar-icon">◇</span><span>Langganan</span>
+          </a>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="sidebar-section-title">Support</div>
+          <a class="sidebar-link" href="help.html">
+            <span class="sidebar-icon">?</span><span>Bantuan</span>
+          </a>
+        </section>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="sidebar-account" type="button" data-account-toggle aria-label="Buka menu akun" aria-expanded="false">
+          <span class="account-avatar">DR</span>
+          <span class="account-copy">
+            <span class="account-name">Redian</span>
+            <span class="account-meta">RENAI GVTL</span>
+          </span>
+          <span aria-hidden="true" style="margin-left:auto;color:#71849a;">⌃</span>
+        </button>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+    <main class="app-main history-page">
+      <header class="mobile-header">
+        <a class="mobile-header-button" href="chat.html" data-back aria-label="Kembali">←</a>
+        <div class="mobile-header-title">Riwayat</div>
+        <button class="mobile-header-button" type="button" data-account-toggle aria-label="Profil" aria-expanded="false">DR</button>
+      </header>
+
+      <header class="history-header">
+        <div class="history-header-title">Riwayat Percakapan</div>
+        <div class="history-header-actions">
+          <button class="history-icon-button" type="button" data-search-open aria-label="Cari">⌕</button>
+        </div>
+      </header>
+
+      <section class="history-content">
+        <div class="history-intro">
+          <div class="history-eyebrow">Workspace</div>
+          <h1 class="history-title">Riwayat percakapan</h1>
+          <p class="history-description">
+            Temukan kembali percakapan, proyek, dan pekerjaan yang pernah kamu lakukan bersama ChatGVTL.
+          </p>
+        </div>
+
+        <label class="history-search">
+          <span class="history-search-icon">⌕</span>
+          <input
+            type="search"
+            data-history-search
+            placeholder="Cari dalam riwayat..."
+            aria-label="Cari dalam riwayat"
+          >
+        </label>
+
+        <section class="history-section">
+          <div class="history-section-heading">
+            <h2>Disematkan</h2>
+            <span class="history-section-count">4 percakapan</span>
+          </div>
+
+          <div class="history-list">
+            <article class="history-item" data-history-item data-title="Membangun Model AI">
+              <span class="history-item-icon">✦</span>
+              <div class="history-item-main">
+                <div class="history-item-title">Membangun Model AI</div>
+                <div class="history-item-meta"><span>ChatGVTL</span><span>•</span><span>Disematkan</span></div>
+              </div>
+              <button class="history-item-action" type="button" data-history-menu-toggle aria-label="Opsi">⋮</button>
+              <div class="history-item-menu" data-history-menu>
+                <button class="history-menu-button" type="button" data-history-action="open">↗ Buka</button>
+                <button class="history-menu-button" type="button" data-history-action="pin">⌖ Lepas sematan</button>
+                <button class="history-menu-button" type="button" data-history-action="archive">▱ Arsipkan</button>
+                <button class="history-menu-button danger" type="button" data-history-action="delete">⌫ Hapus</button>
+              </div>
+            </article>
+
+            <article class="history-item" data-history-item data-title="PT RENAI GVTL Indonesia">
+              <span class="history-item-icon">◇</span>
+              <div class="history-item-main">
+                <div class="history-item-title">PT RENAI GVTL Indonesia</div>
+                <div class="history-item-meta"><span>ChatGVTL</span><span>•</span><span>Disematkan</span></div>
+              </div>
+              <button class="history-item-action" type="button" data-history-menu-toggle aria-label="Opsi">⋮</button>
+              <div class="history-item-menu" data-history-menu>
+                <button class="history-menu-button" type="button" data-history-action="open">↗ Buka</button>
+                <button class="history-menu-button" type="button" data-history-action="pin">⌖ Lepas sematan</button>
+                <button class="history-menu-button" type="button" data-history-action="archive">▱ Arsipkan</button>
+                <button class="history-menu-button danger" type="button" data-history-action="delete">⌫ Hapus</button>
+              </div>
+            </article>
+
+            <article class="history-item" data-history-item data-title="RENAI Router">
+              <span class="history-item-icon">◎</span>
+              <div class="history-item-main">
+                <div class="history-item-title">RENAI Router</div>
+                <div class="history-item-meta"><span>ChatGVTL</span><span>•</span><span>Disematkan</span></div>
+              </div>
+              <button class="history-item-action" type="button" data-history-menu-toggle aria-label="Opsi">⋮</button>
+              <div class="history-item-menu" data-history-menu>
+                <button class="history-menu-button" type="button" data-history-action="open">↗ Buka</button>
+                <button class="history-menu-button" type="button" data-history-action="pin">⌖ Lepas sematan</button>
+                <button class="history-menu-button" type="button" data-history-action="archive">▱ Arsipkan</button>
+                <button class="history-menu-button danger" type="button" data-history-action="delete">⌫ Hapus</button>
+              </div>
+            </article>
+
+            <article class="history-item" data-history-item data-title="ChatGVTL">
+              <span class="history-item-icon">◌</span>
+              <div class="history-item-main">
+                <div class="history-item-title">ChatGVTL</div>
+                <div class="history-item-meta"><span>ChatGVTL</span><span>•</span><span>Disematkan</span></div>
+              </div>
+              <button class="history-item-action" type="button" data-history-menu-toggle aria-label="Opsi">⋮</button>
+              <div class="history-item-menu" data-history-menu>
+                <button class="history-menu-button" type="button" data-history-action="open">↗ Buka</button>
+                <button class="history-menu-button" type="button" data-history-action="pin">⌖ Lepas sematan</button>
+                <button class="history-menu-button" type="button" data-history-action="archive">▱ Arsipkan</button>
+                <button class="history-menu-button danger" type="button" data-history-action="delete">⌫ Hapus</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="history-section">
+          <div class="history-section-heading">
+            <h2>Terkini</h2>
+            <span class="history-section-count" data-history-count>4 percakapan</span>
+          </div>
+
+          <div class="history-list">
+            <article class="history-item" data-history-item data-title="Kembangkan Proyek ChatGVTL">
+              <span class="history-item-icon">✦</span>
+              <div class="history-item-main">
+                <div class="history-item-title">Kembangkan Proyek ChatGVTL</div>
+                <div class="history-item-meta"><span>Hari ini</span><span>•</span><span>ChatGVTL</span></div>
+              </div>
+              <button class="history-item-action" type="button" data-history-menu-toggle aria-label="Opsi">⋮</button>
+              <div class="history-item-menu" data-history-menu>
+                <button class="history-menu-button" type="button" data-history-action="open">↗ Buka</button>
+                <button class="history-menu-button" type="button" data-history-action="pin">⌖ Sematkan</button>
+                <button class="history-menu-button" type="button" data-history-action="archive">▱ Arsipkan</button>
+                <button class="history-menu-button danger" type="button" data-history-action="delete">⌫ Hapus</button>
+              </div>
+            </article>
+
+            <article class="history-item" data-history-item data-title="高清生成">
+              <span class="history-item-icon">◇</span>
+              <div class="history-item-main">
+                <div class="history-item-title">高清生成</div>
+                <div class="history-item-meta"><span>Hari ini</span><span>•</span><span>Image</span></div>
+              </div>
+              <button class="history-item-action" type="button" data-history-menu-toggle aria-label="Opsi">⋮</button>
+              <div class="history-item-menu" data-history-menu>
+                <button class="history-menu-button" type="button" data-history-action="open">↗ Buka</button>
+                <button class="history-menu-button" type="button" data-history-action="pin">⌖ Sematkan</button>
+                <button class="history-menu-button" type="button" data-history-action="archive">▱ Arsipkan</button>
+                <button class="history-menu-button danger" type="button" data-history-action="delete">⌫ Hapus</button>
+              </div>
+            </article>
+
+            <article class="history-item" data-history-item data-title="Kegunaan Alat TENS">
+              <span class="history-item-icon">?</span>
+              <div class="history-item-main">
+                <div class="history-item-title">Kegunaan Alat TENS</div>
+                <div class="history-item-meta"><span>Hari ini</span><span>•</span><span>Chat</span></div>
+              </div>
+              <button class="history-item-action" type="button" data-history-menu-toggle aria-label="Opsi">⋮</button>
+              <div class="history-item-menu" data-history-menu>
+                <button class="history-menu-button" type="button" data-history-action="open">↗ Buka</button>
+                <button class="history-menu-button" type="button" data-history-action="pin">⌖ Sematkan</button>
+                <button class="history-menu-button" type="button" data-history-action="archive">▱ Arsipkan</button>
+                <button class="history-menu-button danger" type="button" data-history-action="delete">⌫ Hapus</button>
+              </div>
+            </article>
+
+            <article class="history-item" data-history-item data-title="Desain Poster Delapan Logo">
+              <span class="history-item-icon">▧</span>
+              <div class="history-item-main">
+                <div class="history-item-title">Desain Poster Delapan Logo</div>
+                <div class="history-item-meta"><span>Kemarin</span><span>•</span><span>Image</span></div>
+              </div>
+              <button class="history-item-action" type="button" data-history-menu-toggle aria-label="Opsi">⋮</button>
+              <div class="history-item-menu" data-history-menu>
+                <button class="history-menu-button" type="button" data-history-action="open">↗ Buka</button>
+                <button class="history-menu-button" type="button" data-history-action="pin">⌖ Sematkan</button>
+                <button class="history-menu-button" type="button" data-history-action="archive">▱ Arsipkan</button>
+                <button class="history-menu-button danger" type="button" data-history-action="delete">⌫ Hapus</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="history-empty" data-history-empty>
+            <div class="history-empty-icon">⌕</div>
+            <div class="history-empty-title">Tidak ada percakapan ditemukan</div>
+            <div class="history-empty-text">Coba kata kunci lain atau mulai percakapan baru.</div>
+            <a class="history-new-chat" href="chat.html">＋ Chat baru</a>
+          </div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <div class="account-menu" data-account-menu aria-label="Menu akun">
+    <div class="account-menu-head">
+      <span class="account-menu-avatar">DR</span>
+      <span>
+        <span class="account-menu-name">Redian</span>
+        <span class="account-menu-meta">RENAI GVTL · Account</span>
+      </span>
+    </div>
+
+    <nav class="account-menu-list">
+      <a class="account-menu-item" href="profile.html">♙ <span>Profil</span></a>
+      <a class="account-menu-item" href="settings.html">⚙ <span>Pengaturan</span></a>
+      <a class="account-menu-item" href="subscription.html">◇ <span>Langganan</span></a>
+      <a class="account-menu-item" href="settings-security.html">🛡 <span>Keamanan</span></a>
+      <div class="account-menu-divider"></div>
+      <a class="account-menu-item danger" href="login.html">↪ <span>Keluar</span></a>
+    </nav>
+  </div>
+
+  <div class="search-panel" data-search-panel>
+    <div class="search-panel-inner">
+      <div class="search-panel-input-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input class="search-panel-input" data-search-input type="search" placeholder="Cari percakapan..." aria-label="Cari percakapan">
+        <button class="search-panel-close" type="button" data-search-close aria-label="Tutup pencarian">✕</button>
+      </div>
+      <div class="search-panel-body">Ketik kata kunci untuk mencari percakapan ChatGVTL.</div>
+    </div>
+  </div>
+
+  <div class="page-transition" data-page-transition aria-hidden="true">
+    <div class="page-transition-orb"></div>
+  </div>
+
+  <script src="js/ui/app-shell.js" defer></script>
+  <script src="js/ui/history.js" defer></script>
+<script src="js/ui/api.js"></script><script src="js/ui/auth-guard.js"></script>
+</body>
+</html>

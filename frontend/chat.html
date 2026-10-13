@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#050A14">
+  <meta name="description" content="ChatGVTL — ruang percakapan AI dari RENAI GVTL.">
+  <title>Chat — ChatGVTL</title>
+
+  <link rel="stylesheet" href="css/core/reset.css">
+  <link rel="stylesheet" href="css/core/variables.css">
+  <link rel="stylesheet" href="css/core/typography.css">
+  <link rel="stylesheet" href="css/core/global.css">
+  <link rel="stylesheet" href="css/components/app-shell.css">
+  <link rel="stylesheet" href="css/components/upload-menu.css">
+  <link rel="stylesheet" href="css/pages/chat.css">
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <aside class="app-sidebar" aria-label="Navigasi ChatGVTL">
+      <a class="sidebar-brand" href="index.html">
+        <img class="sidebar-brand-logo" src="assets/logo/chatgvtl-logo.png" alt="">
+        <span>ChatGVTL</span>
+      </a>
+
+      <label class="sidebar-search">
+        <span aria-hidden="true">⌕</span>
+        <input type="search" placeholder="Cari percakapan" aria-label="Cari percakapan">
+      </label>
+
+      <a class="sidebar-new-chat" href="chat.html">
+        <span aria-hidden="true">＋</span>
+        <span>Chat baru</span>
+      </a>
+
+      <div class="sidebar-scroll">
+        <section class="sidebar-section">
+          <div class="sidebar-section-title">Workspace</div>
+
+          <a class="sidebar-link is-active" href="chat.html">
+            <span class="sidebar-icon">✦</span>
+            <span>Chat</span>
+          </a>
+
+          <a class="sidebar-link" href="history.html">
+            <span class="sidebar-icon">◷</span>
+            <span>Riwayat</span>
+          </a>
+
+          <a class="sidebar-link" href="image-studio.html">
+            <span class="sidebar-icon">◇</span>
+            <span>RenAI Image Generator</span>
+          </a>
+
+          <a class="sidebar-link" href="files.html">
+            <span class="sidebar-icon">□</span>
+            <span>File</span>
+          </a>
+
+          <a class="sidebar-link" href="projects.html">
+            <span class="sidebar-icon">▣</span>
+            <span>Projects</span>
+          </a>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="sidebar-section-title">Pinned</div>
+          <div class="sidebar-history">
+            <a class="sidebar-history-item" href="#">Membangun Model AI</a>
+            <a class="sidebar-history-item" href="#">PT RENAI GVTL Indonesia</a>
+            <a class="sidebar-history-item" href="#">ChatGVTL</a>
+            <a class="sidebar-history-item" href="#">RENAI Router</a>
+            <a class="sidebar-history-item" href="#">RENAI GVTL Platform</a>
+          </div>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="sidebar-section-title">Account</div>
+
+          <a class="sidebar-link" href="profile.html">
+            <span class="sidebar-icon">♙</span>
+            <span>Profil</span>
+          </a>
+
+          <a class="sidebar-link" href="settings.html">
+            <span class="sidebar-icon">⚙</span>
+            <span>Pengaturan</span>
+          </a>
+
+          <a class="sidebar-link" href="subscription.html">
+            <span class="sidebar-icon">◇</span>
+            <span>Langganan</span>
+          </a>
+        </section>
+
+        <section class="sidebar-section">
+          <div class="sidebar-section-title">Support</div>
+
+          <a class="sidebar-link" href="help.html">
+            <span class="sidebar-icon">?</span>
+            <span>Bantuan</span>
+          </a>
+        </section>
+      </div>
+
+      <div class="sidebar-footer">
+        <button class="sidebar-account" type="button" data-account-toggle aria-label="Buka menu akun" aria-expanded="false">
+          <span class="account-avatar">DR</span>
+          <span class="account-copy">
+            <span class="account-name">Redian</span>
+            <span class="account-meta">RENAI GVTL</span>
+          </span>
+          <span aria-hidden="true" style="margin-left:auto;color:#71849a;">⌃</span>
+        </button>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" data-sidebar-backdrop></div>
+
+    <main class="app-main chat-page">
+      <header class="mobile-header">
+        <button
+          class="mobile-header-button"
+          type="button"
+          data-sidebar-toggle
+          aria-label="Buka menu"
+          aria-expanded="false"
+        >☰</button>
+
+        <div class="mobile-header-title">ChatGVTL</div>
+
+        <button class="mobile-header-button" type="button" data-account-toggle aria-label="Profil" aria-expanded="false">DR</button>
+      </header>
+
+      <header class="chat-header">
+        <div class="chat-title">
+          <span class="chat-status-dot" aria-hidden="true"></span>
+          ChatGVTL
+        </div>
+
+        <div class="chat-header-actions">
+          <button class="chat-header-action" type="button" data-search-open aria-label="Cari">⌕</button>
+          <button class="chat-header-action" type="button" data-conversation-toggle aria-label="Opsi percakapan" aria-expanded="false">☰</button>
+        </div>
+      </header>
+
+      <section class="chat-content">
+        <div class="chat-empty">
+          <div class="chat-empty-inner">
+            <div class="chat-orb" aria-hidden="true"></div>
+
+            <h1>
+              Ada yang ingin<br>
+              <span>kamu kerjakan?</span>
+            </h1>
+
+            <p>
+              Tanyakan sesuatu, kembangkan ide, buat sesuatu,
+              atau mulai pekerjaan baru bersama ChatGVTL.
+            </p>
+
+
+            <div class="chat-suggestions">
+              <button
+                class="chat-suggestion"
+                type="button"
+                data-suggestion="Bantu saya mengembangkan ide proyek AI."
+              >
+                <span class="chat-suggestion-icon">✦</span>
+                <span class="chat-suggestion-text">Kembangkan ide proyek</span>
+              </button>
+
+              <button
+                class="chat-suggestion"
+                type="button"
+                data-suggestion="Bantu saya menulis dan menyempurnakan sebuah dokumen."
+              >
+                <span class="chat-suggestion-icon">✎</span>
+                <span class="chat-suggestion-text">Tulis atau edit</span>
+              </button>
+
+              <button
+                class="chat-suggestion"
+                type="button"
+                data-suggestion="Cari dan rangkum informasi yang saya butuhkan."
+              >
+                <span class="chat-suggestion-icon">◎</span>
+                <span class="chat-suggestion-text">Cari informasi</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="composer-wrap">
+          <div class="upload-list" data-upload-list aria-live="polite"></div>
+
+          <form class="composer" data-chat-form>
+            <div class="composer-box">
+              <button
+                class="composer-button"
+                type="button"
+                data-attach-toggle
+                aria-label="Lampirkan"
+                aria-expanded="false"
+              >＋</button>
+
+              <textarea
+                class="composer-input"
+                data-chat-input
+                rows="1"
+                placeholder="Tanyakan sesuatu kepada ChatGVTL..."
+                aria-label="Pesan"
+              ></textarea>
+
+              <button class="composer-button" type="button" aria-label="Suara">♩</button>
+
+              <button class="composer-button composer-send" type="submit" aria-label="Kirim">↑</button>
+            </div>
+
+            <div class="composer-note">
+              ChatGVTL dapat membuat kesalahan. Periksa informasi penting.
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+
+
+  <input
+    class="hidden-file-input"
+    type="file"
+    data-file-input
+    multiple
+    accept="image/*,.pdf,.txt,.csv,.json,.doc,.docx,.xls,.xlsx,.ppt,.pptx"
+  >
+
+  <div class="attach-menu" data-attach-menu aria-label="Lampiran">
+    <button class="attach-menu-item" type="button" data-file-action>
+      <span class="attach-menu-icon">▣</span>
+      <span>
+        <span class="attach-menu-label">Foto</span>
+        <span class="attach-menu-description">Pilih gambar dari perangkat</span>
+      </span>
+    </button>
+
+    <button class="attach-menu-item" type="button" data-file-action>
+      <span class="attach-menu-icon">⌕</span>
+      <span>
+        <span class="attach-menu-label">File</span>
+        <span class="attach-menu-description">Dokumen, PDF, data, dan lainnya</span>
+      </span>
+    </button>
+
+    <button class="attach-menu-item" type="button" data-file-action>
+      <span class="attach-menu-icon">⌁</span>
+      <span>
+        <span class="attach-menu-label">Tambahkan dari perangkat</span>
+        <span class="attach-menu-description">Pilih beberapa file sekaligus</span>
+      </span>
+    </button>
+  </div>
+
+
+  <div class="conversation-menu" data-conversation-menu aria-label="Opsi percakapan">
+    <div class="conversation-menu-title">
+      <span class="conversation-menu-chat-title">ChatGVTL</span>
+      <span class="conversation-menu-subtitle">Percakapan saat ini</span>
+    </div>
+
+    <nav class="conversation-menu-list">
+      <button class="conversation-menu-item" type="button" data-conversation-action="share">
+        <span class="conversation-menu-icon">⌯</span>
+        <span>Bagikan</span>
+      </button>
+
+      <button class="conversation-menu-item" type="button" data-conversation-action="pin">
+        <span class="conversation-menu-icon">⌖</span>
+        <span>Sematkan</span>
+      </button>
+
+      <button class="conversation-menu-item has-arrow" type="button" data-conversation-action="project">
+        <span class="conversation-menu-icon">⊞</span>
+        <span>Tambahkan ke project</span>
+        <span class="conversation-menu-arrow">›</span>
+      </button>
+
+      <button class="conversation-menu-item" type="button" data-conversation-action="files">
+        <span class="conversation-menu-icon">♧</span>
+        <span>File yang diunggah</span>
+      </button>
+
+      <button class="conversation-menu-item" type="button" data-conversation-action="search">
+        <span class="conversation-menu-icon">⌕</span>
+        <span>Cari di chat</span>
+      </button>
+
+      <button class="conversation-menu-item" type="button" data-conversation-action="home">
+        <span class="conversation-menu-icon">⌂</span>
+        <span>Tambahkan ke beranda</span>
+      </button>
+
+      <button class="conversation-menu-item" type="button" data-conversation-action="archive">
+        <span class="conversation-menu-icon">▱</span>
+        <span>Arsipkan</span>
+      </button>
+
+      <button class="conversation-menu-item danger" type="button" data-conversation-action="delete">
+        <span class="conversation-menu-icon">♜</span>
+        <span>Hapus</span>
+      </button>
+    </nav>
+  </div>
+
+  <div class="account-menu" data-account-menu aria-label="Menu akun">
+    <div class="account-menu-head">
+      <span class="account-menu-avatar">DR</span>
+      <span>
+        <span class="account-menu-name">Redian</span>
+        <span class="account-menu-meta">RENAI GVTL · Account</span>
+      </span>
+    </div>
+
+    <nav class="account-menu-list">
+      <a class="account-menu-item" href="profile.html">♙ <span>Profil</span></a>
+      <a class="account-menu-item" href="settings.html">⚙ <span>Pengaturan</span></a>
+      <a class="account-menu-item" href="subscription.html">◇ <span>Langganan</span></a>
+      <a class="account-menu-item" href="settings-security.html">🛡 <span>Keamanan</span></a>
+      <div class="account-menu-divider"></div>
+      <a class="account-menu-item danger" href="login.html" data-logout>↪ <span>Keluar</span></a>
+    </nav>
+  </div>
+
+  <div class="search-panel" data-search-panel>
+    <div class="search-panel-inner">
+      <div class="search-panel-input-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input class="search-panel-input" data-search-input type="search" placeholder="Cari percakapan..." aria-label="Cari percakapan">
+        <button class="search-panel-close" type="button" data-search-close aria-label="Tutup pencarian">✕</button>
+      </div>
+      <div class="search-panel-body">
+        Ketik kata kunci untuk mencari percakapan ChatGVTL.
+      </div>
+    </div>
+  </div>
+
+  <div class="page-transition" data-page-transition aria-hidden="true">
+    <div class="page-transition-orb"></div>
+  </div>
+
+  <script src="js/ui/app-shell.js" defer></script>
+  <script src="js/ui/chat.js" defer></script>
+<script src="js/ui/api.js"></script><script src="js/ui/auth-guard.js"></script>
+</body>
+</html>

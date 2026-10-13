@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050a14">
+  <title>Buat akun ChatGVTL — RENAI GVTL</title>
+  <link rel="stylesheet" href="css/core/reset.css">
+  <link rel="stylesheet" href="css/core/variables.css">
+  <link rel="stylesheet" href="css/core/typography.css">
+  <link rel="stylesheet" href="css/pages/auth.css">
+</head>
+<body>
+  <main class="auth-page">
+    <a class="auth-brand" href="index.html" aria-label="ChatGVTL"><img src="assets/logo/chatgvtl-logo.png" alt=""><span>ChatGVTL</span></a>
+    <section class="auth-card" aria-labelledby="register-title">
+      <span class="auth-kicker">RENAI GVTL</span>
+      <h1 id="register-title">Buat akun ChatGVTL</h1>
+      <p>Bangun akun RENAI GVTL dan mulai workspace AI kamu.</p>
+
+      <div class="auth-providers" aria-label="Pilihan pendaftaran">
+        <button class="provider-button provider-google" type="button" data-provider="Google"><span class="provider-mark">G</span><span>Daftar dengan Google</span></button>
+        <button class="provider-button provider-facebook" type="button" data-provider="Facebook"><span class="provider-mark">f</span><span>Daftar dengan Facebook</span></button>
+        <button class="provider-button" type="button" data-provider="Apple"><span class="provider-mark">●</span><span>Daftar dengan Apple</span></button>
+        <button class="provider-button" type="button" data-provider="Microsoft"><span class="provider-mark microsoft-mark"><i></i><i></i><i></i><i></i></span><span>Daftar dengan Microsoft</span></button>
+      </div>
+      <div class="auth-divider"><span>atau daftar dengan email</span></div>
+
+      <form data-register-form>
+        <label>Nama tampilan<input name="displayName" type="text" autocomplete="name" placeholder="Nama kamu"></label>
+        <label>Email<input name="email" type="email" autocomplete="email" placeholder="nama@email.com"></label>
+        <label>Password<div class="password-field"><input name="password" type="password" autocomplete="new-password" placeholder="Minimal 8 karakter"><button type="button" class="password-toggle" data-password-toggle aria-label="Tampilkan password">Lihat</button></div></label>
+        <label>Konfirmasi password<input name="confirmPassword" type="password" autocomplete="new-password" placeholder="Ulangi password"></label>
+        <label class="check"><input type="checkbox" name="terms"> <span>Saya menyetujui Syarat Layanan dan Kebijakan Privasi.</span></label>
+        <button class="auth-primary" type="submit">Daftar</button>
+      </form>
+
+      <p class="auth-switch">Sudah punya akun? <a href="login.html">Masuk</a></p>
+      <div class="auth-status" data-auth-status role="status" aria-live="polite"></div>
+    </section>
+    <footer>© 2026 RENAI GVTL Indonesia · ChatGVTL</footer>
+  </main>
+  <script src="js/ui/api.js"></script><script src="js/ui/auth.js"></script>
+</body>
+</html>
